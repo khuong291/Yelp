@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1B6459DC3895529AA04FCDBC'
+               BlueprintIdentifier = '3EF960281C0CD741522BED4D'
                BlueprintName = 'Pods-Yelp'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Yelp.framework'>
