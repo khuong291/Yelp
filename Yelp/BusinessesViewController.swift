@@ -10,12 +10,16 @@ import UIKit
 import AFNetworking
 import BDBOAuth1Manager
 
-class BusinessesViewController: UIViewController {
+class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet var tableView: UITableView!
     var businesses: [Business]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.dataSource = self
+        tableView.delegate = self
 
         //        Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in
         //            self.businesses = businesses
@@ -36,9 +40,15 @@ class BusinessesViewController: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return businesses.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("BusinessCell", forIndexPath: indexPath) as! BusinessCell
+        let business = businesses[indexPath.row]
+        cell.displayBusiness(business)
+        return cell
     }
 
     /*

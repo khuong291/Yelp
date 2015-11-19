@@ -129,7 +129,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Yelp" id="dF2-1v-f96"/>
                     <connections>
-                        <outlet property="tableView" destination="DPt-dj-rmc" id="rbm-ut-MCe"/>
+                        <outlet property="tableView" destination="DPt-dj-rmc" id="nsV-fH-Fzv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
