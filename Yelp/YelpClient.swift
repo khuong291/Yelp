@@ -78,7 +78,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
             if dictionaries != nil {
                 completion(Business.businesses(array: dictionaries!), nil)
             }
-            }, failure: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+            }, failure: { (operation, error) -> Void in
                 completion(nil, error)
         })!
     }
