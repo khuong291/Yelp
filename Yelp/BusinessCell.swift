@@ -26,9 +26,15 @@ class BusinessCell: UITableViewCell {
         }
     }
 
+    override func awakeFromNib() {
+        thumbImageView.layer.cornerRadius = 3
+        thumbImageView.clipsToBounds = true
+        categoriesLabel.preferredMaxLayoutWidth = categoriesLabel.frame.size.width
+    }
+
     func displayBusiness(business: Business) {
         addressLabel.text = business.address
-        reviewsCountLabel.text = String(business.reviewCount)
+        reviewsCountLabel.text = "\(business.reviewCount!) Reviews"
         categoriesLabel.text = business.categories
         ratingImageView.af_setImageWithURL(business.ratingImageURL!)
         distanceLabel.text = business.distance
