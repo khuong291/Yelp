@@ -29,7 +29,7 @@ class BusinessCell: UITableViewCell {
     override func awakeFromNib() {
         thumbImageView.layer.cornerRadius = 3
         thumbImageView.clipsToBounds = true
-        categoriesLabel.preferredMaxLayoutWidth = categoriesLabel.frame.size.width
+        //addressLabel.preferredMaxLayoutWidth = addressLabel.frame.size.width
     }
 
     func displayBusiness(business: Business) {
