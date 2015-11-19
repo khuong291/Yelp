@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AFNetworking
+import BDBOAuth1Manager
 
 let yelpConsumerKey = "vxKwwcR_NMQ7WaEiQBK_CA"
 let yelpConsumerSecret = "33QCvh5bIF5jIHR5klQr7RtBDhQ"
