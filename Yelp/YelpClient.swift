@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import AFNetworking
+import Alamofire
+import AlamofireImage
 import BDBOAuth1Manager
 
 let yelpConsumerKey = "vxKwwcR_NMQ7WaEiQBK_CA"

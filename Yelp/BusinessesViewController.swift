@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import AFNetworking
+import Alamofire
+import AlamofireImage
 import BDBOAuth1Manager
 
 class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {

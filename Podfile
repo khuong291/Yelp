@@ -4,7 +4,9 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Yelp' do
-	pod 'AFNetworking', '~> 2.0'
 	pod 'BDBOAuth1Manager', '~> 1.6'
+	pod 'Alamofire', '~> 3.1'
+	pod 'SVProgressHUD', '2.0-beta'
+    pod 'AlamofireImage', '~> 2.1'
 end
 

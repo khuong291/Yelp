@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class BusinessCell: UITableViewCell {
     
@@ -28,9 +30,9 @@ class BusinessCell: UITableViewCell {
         addressLabel.text = business.address
         reviewsCountLabel.text = String(business.reviewCount)
         categoriesLabel.text = business.categories
-        ratingImageView.setImageWithURL(business.ratingImageURL!)
+        ratingImageView.af_setImageWithURL(business.ratingImageURL!)
         distanceLabel.text = business.distance
         nameLabel.text = business.name
-        thumbImageView.setImageWithURL(business.imageURL!)
+        thumbImageView.af_setImageWithURL(business.imageURL!)
     }
 }
