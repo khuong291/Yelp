@@ -4,7 +4,6 @@
 //
 //  Created by Khuong Pham on 11/20/15.
 //  Copyright © 2015 Fantageek. All rights reserved.
-//
 
 import UIKit
 
@@ -36,8 +35,6 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
 
-
-        // (miles)
         radii = [nil, 0.3, 1, 5, 20]
 
         getOldFilters()
@@ -47,18 +44,16 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func getOldFilters() {
 
-        // Get old states
-        var switchStatesData = defaults.objectForKey("switchStates") as? NSData
+        let switchStatesData = defaults.objectForKey("switchStates") as? NSData
         if let switchStatesData = switchStatesData {
             switchStates = NSKeyedUnarchiver.unarchiveObjectWithData(switchStatesData) as! [Int:Bool]
         }
 
-        var filtersData = defaults.objectForKey("filters") as? NSData
+        let filtersData = defaults.objectForKey("filters") as? NSData
         if let filtersData = filtersData {
             filters = NSKeyedUnarchiver.unarchiveObjectWithData(filtersData) as! [String : AnyObject]
         }
@@ -67,8 +62,6 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
             filters["sort"] = NSNumber(unsignedInteger: 0)
         }
     }
-
-    // MARK: Button
 
     @IBAction func onCancelButton(sender: AnyObject) {
 
@@ -94,16 +87,14 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         delegate?.filtersViewController?(self, didUpdateFilters: filters)
 
         // Save to NSUserDefaults
-        var switchStatesData = NSKeyedArchiver.archivedDataWithRootObject(switchStates)
+        let switchStatesData = NSKeyedArchiver.archivedDataWithRootObject(switchStates)
         self.defaults.setObject(switchStatesData, forKey: "switchStates")
 
-        var filtersData = NSKeyedArchiver.archivedDataWithRootObject(filters)
+        let filtersData = NSKeyedArchiver.archivedDataWithRootObject(filters)
         self.defaults.setObject(filtersData, forKey: "filters")
 
         defaults.synchronize()
     }
-
-    // MARK: Table view
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 5
@@ -129,9 +120,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 0
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-        switch indexPath.section {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {        switch indexPath.section {
         case 0:
             // Deal area
 
@@ -234,11 +223,11 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
-        var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        headerView.backgroundColor = UIColor(red: 250/255, green: 234/255, blue: 234/255, alpha: 1)
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        headerView.backgroundColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 0.5)
 
-        var titleLabel = UILabel(frame: CGRect(x: 15, y: 15, width: 320, height: 30))
-        titleLabel.textColor = UIColor(red: 190/255, green: 38/255, blue: 37/255, alpha: 1.0)
+        let titleLabel = UILabel(frame: CGRect(x: 15, y: 15, width: 320, height: 30))
+        titleLabel.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         titleLabel.font = UIFont(name: "Helvetica", size: 15)
 
         switch section {
