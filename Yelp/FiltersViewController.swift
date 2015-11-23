@@ -122,7 +122,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {        switch indexPath.section {
         case 0:
-            // Deal area
+            // Deal
 
             let cell = tableView.dequeueReusableCellWithIdentifier("SwitchCell", forIndexPath: indexPath) as! SwitchCell
 
@@ -134,12 +134,11 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
 
         case 1:
-            // Radius area
+            // Distance
 
             let cell = tableView.dequeueReusableCellWithIdentifier("DropDownCell", forIndexPath: indexPath) as! DropDownCell
             cell.delegate = self
 
-            // Set label for each cell
             if indexPath.row == 0 {
                 cell.label.text = "Auto"
             } else {
@@ -156,7 +155,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
 
         case 2:
-            // Sort area
+            // Sort
 
             let cell = tableView.dequeueReusableCellWithIdentifier("DropDownCell", forIndexPath: indexPath) as! DropDownCell
             cell.delegate = self
@@ -181,7 +180,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
 
         case 3:
-            // Category area
+            // Category
 
             if indexPath.row != categories.count {
                 let cell = tableView.dequeueReusableCellWithIdentifier("SwitchCell", forIndexPath: indexPath) as! SwitchCell
@@ -200,12 +199,11 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let tapSeeAllCell = UITapGestureRecognizer(target: self, action: "tapSeeAll:")
                 cell.addGestureRecognizer(tapSeeAllCell)
 
-
                 return cell
             }
 
         case 4:
-            // Reset row
+            // Reset
 
             let cell = tableView.dequeueReusableCellWithIdentifier("SeeAllCell", forIndexPath: indexPath) as! SeeAllCell
             cell.label.text = "Reset filters"
@@ -289,22 +287,20 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 35.0
     }
 
-    // MARK: Radius area
-
     func setRadiusIcon(row: Int, iconView: UIImageView) {
 
         let radiusValue = filters["radius"] as! Float?
 
         if radiusValue == radii[row] {
             if isRadiusCollapsed {
-                iconView.image = UIImage(named: "Arrow")
+                iconView.image = UIImage(named: "expand_arrow")
             } else {
-                iconView.image = UIImage(named: "Tick")
+                iconView.image = UIImage(named: "check")
             }
             return
         }
 
-        iconView.image = UIImage(named: "Circle")
+        iconView.image = UIImage(named: "cancel")
     }
 
     func setRadiusCellVisible(row: Int, cell: DropDownCell) {
@@ -319,8 +315,6 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.label.hidden = false
         cell.iconView.hidden = false
     }
-
-    // MARK: Sort area
 
     func getSortValue() -> Int {
 
@@ -339,14 +333,14 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         if sortValue == row {
             if isSortCollapsed {
-                iconView.image = UIImage(named: "Arrow")
+                iconView.image = UIImage(named: "expand_arrow")
             } else {
-                iconView.image = UIImage(named: "Tick")
+                iconView.image = UIImage(named: "check")
             }
             return
         }
 
-        iconView.image = UIImage(named: "Circle")
+        iconView.image = UIImage(named: "cancel")
     }
 
     func setSortCellVisible(row: Int, cell: DropDownCell) {
@@ -361,8 +355,6 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.label.hidden = false
         cell.iconView.hidden = false
     }
-
-    // MARK: Category area
 
     func setCategoryCellVisible(row: Int, cell: SwitchCell) {
 
@@ -392,8 +384,6 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.reloadData()
     }
 
-    // MARK: Reset filters
-
     func tapReset(sender:UITapGestureRecognizer) {
 
         filters["deal"] = false
@@ -403,8 +393,6 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         tableView.reloadData()
     }
-
-    // MARK: Implement delegate
 
     func switchCell(switchCell: SwitchCell, didChangeValue value: Bool) {
 
@@ -423,15 +411,15 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         if indexPath != nil {
             if indexPath!.section == 1 {
-                // Radius area
+                // Distance
                 switch currentImg {
-                case UIImage(named: "Arrow")!:
+                case UIImage(named: "expand_arrow")!:
                     isRadiusCollapsed = false
                     break
-                case UIImage(named: "Tick")!:
+                case UIImage(named: "check")!:
                     isRadiusCollapsed = true
                     break
-                case UIImage(named: "Circle")!:
+                case UIImage(named: "cancel")!:
                     filters["radius"] = radii[indexPath!.row]
                     isRadiusCollapsed = true
                     break
@@ -439,15 +427,15 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
                     break
                 }
             } else if indexPath!.section == 2 {
-                // Sort area
+                // Sort
                 switch currentImg {
-                case UIImage(named: "Arrow")!:
+                case UIImage(named: "expand_arrow")!:
                     isSortCollapsed = false
                     break
-                case UIImage(named: "Tick")!:
+                case UIImage(named: "check")!:
                     isSortCollapsed = true
                     break
-                case UIImage(named: "Circle")!:
+                case UIImage(named: "cancel")!:
                     filters["sort"] = NSNumber(unsignedInteger: UInt((indexPath?.row)!))
                     isSortCollapsed = true
                     break
@@ -460,8 +448,6 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
 
     }
-
-    // MARK: List of Categories
 
     func yelpCategories() -> [[String: String]] {
 

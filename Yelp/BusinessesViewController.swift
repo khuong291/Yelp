@@ -16,8 +16,6 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet var tableView: UITableView!
     var businesses: [Business]!
     var searchController: UISearchController!
-    var refreshControl = UIRefreshControl!()
-    //lazy   var searchBar:UISearchBar = UISearchBar(frame: CGRectMake(100, 0, 100, 20))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +24,6 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         tableView.delegate = self
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 120
-
-        /*searchBar.placeholder = "Search"
-        let leftNavBarButton = UIBarButtonItem(customView: searchBar)
-        self.navigationItem.leftBarButtonItem = leftNavBarButton*/
 
         /*Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in
             self.businesses = businesses
@@ -45,35 +39,6 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
             self.tableView.reloadData()
         }
     }
-
-    /*func refreshBusiness() {
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl.attributedTitle = NSAttributedString(string: "🐌🐌🐌🐌Refreshing🐌🐌🐌🐌")
-        self.refreshControl.addTarget(self, action: "onRefresh", forControlEvents: .ValueChanged)
-        self.tableView.addSubview(refreshControl)
-    }
-
-    func onRefresh() {
-        self.load()
-        self.tableView.reloadData()
-        self.refreshControl.endRefreshing()
-    }
-
-    func load() {
-        let network = Network()
-
-        SVProgressHUD.showWithStatus("Loading data")
-        network.load(mediaType) { (mediaList) -> Void in
-            if let mediaList = mediaList {
-                SVProgressHUD.dismiss()
-                self.mediaList = mediaList
-                self.tableView.reloadData()
-            } else {
-                SVProgressHUD.showErrorWithStatus("Error loading data")
-            }
-        }
-    }*/
-
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if businesses != nil {
@@ -103,28 +68,5 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
             self.tableView.reloadData()
         }
     }
-
-    /*func updateSearchResultsForSearchController(searchController: UISearchController) {
-        let searchText = searchController.searchBar.text
-
-        if searchText == nil {
-            return
-        }
-
-        let filteredMediaList = mediaList.filter { (media) -> Bool in
-            return media.title.containsString(searchText!)
-        }
-
-        mediaSearchVC.update(filteredMediaList)
-    }*/
-
-    /*
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

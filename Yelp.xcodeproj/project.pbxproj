@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F9E22D2D30176CF24DE2F2A /* Pods_Yelp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FDC4FD518380ED3B0F53BF /* Pods_Yelp.framework */; };
-		993BEEAF1C0220F400513B0D /* expand.png in Resources */ = {isa = PBXBuildFile; fileRef = 993BEEAE1C0220F400513B0D /* expand.png */; };
+		993BEEAF1C0220F400513B0D /* expand_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 993BEEAE1C0220F400513B0D /* expand_arrow.png */; };
 		993BEEB11C02218F00513B0D /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 993BEEB01C02218F00513B0D /* check.png */; };
 		993BEEB31C02221200513B0D /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BEEB21C02221200513B0D /* DropDownCell.swift */; };
 		993BEEB51C02235E00513B0D /* SeeAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BEEB41C02235E00513B0D /* SeeAllCell.swift */; };
@@ -22,13 +22,16 @@
 		9987D22B1BFCDBA600B14779 /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987D22A1BFCDBA600B14779 /* BusinessesViewController.swift */; };
 		9987D22E1BFCDD8A00B14779 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987D22D1BFCDD8A00B14779 /* Business.swift */; };
 		9987D2311BFCE22000B14779 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987D2301BFCE22000B14779 /* YelpClient.swift */; };
+		99DEC7431C02C8D20035F6D4 /* collapse_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DEC7421C02C8D20035F6D4 /* collapse_arrow.png */; };
+		99DEC7451C02C9C00035F6D4 /* hambergur.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DEC7441C02C9C00035F6D4 /* hambergur.png */; };
+		99DEC7471C03071D0035F6D4 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DEC7461C03071D0035F6D4 /* cancel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		23D666E5A1D31CA8ABD1C427 /* Pods-Yelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yelp/Pods-Yelp.release.xcconfig"; sourceTree = "<group>"; };
 		78FDC4FD518380ED3B0F53BF /* Pods_Yelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8325604AF686D2655CE0D8EB /* Pods-Yelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yelp/Pods-Yelp.debug.xcconfig"; sourceTree = "<group>"; };
-		993BEEAE1C0220F400513B0D /* expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = expand.png; path = ../../Desktop/expand.png; sourceTree = "<group>"; };
+		993BEEAE1C0220F400513B0D /* expand_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = expand_arrow.png; path = ../../Desktop/expand_arrow.png; sourceTree = "<group>"; };
 		993BEEB01C02218F00513B0D /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check.png; path = ../../Desktop/check.png; sourceTree = "<group>"; };
 		993BEEB21C02221200513B0D /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		993BEEB41C02235E00513B0D /* SeeAllCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeAllCell.swift; sourceTree = "<group>"; };
@@ -44,7 +47,9 @@
 		9987D22A1BFCDBA600B14779 /* BusinessesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesViewController.swift; sourceTree = "<group>"; };
 		9987D22D1BFCDD8A00B14779 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		9987D2301BFCE22000B14779 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
-		9987D2321BFCE8A800B14779 /* Yelp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yelp-Bridging-Header.h"; sourceTree = "<group>"; };
+		99DEC7421C02C8D20035F6D4 /* collapse_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = collapse_arrow.png; path = ../../Desktop/collapse_arrow.png; sourceTree = "<group>"; };
+		99DEC7441C02C9C00035F6D4 /* hambergur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hambergur.png; path = ../../Desktop/hambergur.png; sourceTree = "<group>"; };
+		99DEC7461C03071D0035F6D4 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cancel.png; path = ../../Desktop/cancel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +84,11 @@
 		9987D2081BFCD6C700B14779 = {
 			isa = PBXGroup;
 			children = (
+				99DEC7461C03071D0035F6D4 /* cancel.png */,
+				99DEC7441C02C9C00035F6D4 /* hambergur.png */,
+				99DEC7421C02C8D20035F6D4 /* collapse_arrow.png */,
 				993BEEB01C02218F00513B0D /* check.png */,
-				993BEEAE1C0220F400513B0D /* expand.png */,
+				993BEEAE1C0220F400513B0D /* expand_arrow.png */,
 				9987D2131BFCD6C700B14779 /* Yelp */,
 				9987D2121BFCD6C700B14779 /* Products */,
 				455C688B3983157598EB053F /* Pods */,
@@ -99,7 +107,6 @@
 		9987D2131BFCD6C700B14779 /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
-				9987D2321BFCE8A800B14779 /* Yelp-Bridging-Header.h */,
 				9987D22F1BFCE1E500B14779 /* API */,
 				9987D22C1BFCDD6400B14779 /* Models */,
 				9987D2291BFCDB7900B14779 /* View Controllers */,
@@ -210,9 +217,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				993BEEAF1C0220F400513B0D /* expand.png in Resources */,
+				993BEEAF1C0220F400513B0D /* expand_arrow.png in Resources */,
+				99DEC7471C03071D0035F6D4 /* cancel.png in Resources */,
+				99DEC7451C02C9C00035F6D4 /* hambergur.png in Resources */,
 				993BEEB11C02218F00513B0D /* check.png in Resources */,
 				9987D21F1BFCD6C700B14779 /* LaunchScreen.storyboard in Resources */,
+				99DEC7431C02C8D20035F6D4 /* collapse_arrow.png in Resources */,
 				9987D21C1BFCD6C700B14779 /* Assets.xcassets in Resources */,
 				9987D21A1BFCD6C700B14779 /* Main.storyboard in Resources */,
 			);
