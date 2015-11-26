@@ -102,11 +102,6 @@
 		9987D2131BFCD6C700B14779 /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
-				99DEC7481C030F380035F6D4 /* cancel.png */,
-				99DEC7491C030F380035F6D4 /* check.png */,
-				99DEC74A1C030F380035F6D4 /* collapse_arrow.png */,
-				99DEC74B1C030F380035F6D4 /* expand_arrow.png */,
-				99DEC74C1C030F380035F6D4 /* hambergur.png */,
 				9987D22F1BFCE1E500B14779 /* API */,
 				9987D22C1BFCDD6400B14779 /* Models */,
 				9987D2291BFCDB7900B14779 /* View Controllers */,
@@ -114,6 +109,11 @@
 				9987D2141BFCD6C700B14779 /* AppDelegate.swift */,
 				9987D2181BFCD6C700B14779 /* Main.storyboard */,
 				9987D21B1BFCD6C700B14779 /* Assets.xcassets */,
+				99DEC7481C030F380035F6D4 /* cancel.png */,
+				99DEC7491C030F380035F6D4 /* check.png */,
+				99DEC74A1C030F380035F6D4 /* collapse_arrow.png */,
+				99DEC74B1C030F380035F6D4 /* expand_arrow.png */,
+				99DEC74C1C030F380035F6D4 /* hambergur.png */,
 				9987D21D1BFCD6C700B14779 /* LaunchScreen.storyboard */,
 				9987D2201BFCD6C700B14779 /* Info.plist */,
 			);
