@@ -16,16 +16,16 @@ class DropDownCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
 
-    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var iconView: UIImageView?
 
     var delegate: DropDownCellDelegate!
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if delegate != nil {
-            delegate?.selectCell?(self, didSelect: iconView.image!)
+            delegate?.selectCell?(self, didSelect: iconView!.image!)
         }
-        
+
     }
     
 }

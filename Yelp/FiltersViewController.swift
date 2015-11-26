@@ -149,7 +149,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
             }
 
-            setRadiusIcon(indexPath.row, iconView: cell.iconView)
+            setRadiusIcon(indexPath.row, iconView: cell.iconView!)
             setRadiusCellVisible(indexPath.row, cell: cell)
 
             return cell
@@ -174,7 +174,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
                 break
             }
 
-            setSortIcon(indexPath.row, iconView: cell.iconView)
+            setSortIcon(indexPath.row, iconView: cell.iconView!)
             setSortCellVisible(indexPath.row, cell: cell)
 
             return cell
@@ -308,12 +308,12 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         let radiusValue = filters["radius"] as! Float?
         if isRadiusCollapsed && radii[row] != radiusValue {
             cell.label.hidden = true
-            cell.iconView.hidden = true
+            cell.iconView!.hidden = true
             return
         }
 
         cell.label.hidden = false
-        cell.iconView.hidden = false
+        cell.iconView!.hidden = false
     }
 
     func getSortValue() -> Int {
@@ -348,12 +348,12 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         let sortValue = getSortValue()
         if isSortCollapsed && row != sortValue {
             cell.label.hidden = true
-            cell.iconView.hidden = true
+            cell.iconView!.hidden = true
             return
         }
 
         cell.label.hidden = false
-        cell.iconView.hidden = false
+        cell.iconView!.hidden = false
     }
 
     func setCategoryCellVisible(row: Int, cell: SwitchCell) {
